@@ -1,7 +1,35 @@
 import 'package:flutter/material.dart';
+import 'package:splashscreen/splashscreen.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(MaterialApp(
+    home: Hydris(),
+  ));
+}
+
+class Hydris extends StatefulWidget {
+  @override
+  _HydrisState createState() => _HydrisState();
+}
+
+class _HydrisState extends State<Hydris> {
+  @override
+  Widget build(BuildContext context) {
+    return SplashScreen(
+      seconds: 8,
+      navigateAfterSeconds: MyApp(),
+      title: Text(
+        'Welcome In Splash Screen',
+        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0),
+      ),
+      image: Image.asset('assets/splash_screen.png'),
+      backgroundColor: Colors.black,
+      styleTextUnderTheLoader: TextStyle(),
+      photoSize: 150.0,
+      onClick: () => print('Flutter Egpyt'),
+      loaderColor: Colors.white,
+    );
+  }
 }
 
 class MyApp extends StatelessWidget {
