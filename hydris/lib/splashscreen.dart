@@ -9,31 +9,27 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        fit: StackFit.expand,
-        children: <Widget>[
-          Column(
-            mainAxisAlignment: MainAxisAlignment.end,
-            mainAxisSize: MainAxisSize.min,
-            children: <Widget>[
-              Padding(
-                padding: EdgeInsets.only(bottom: 30.0),
-                child: Text('HYDRIS'),
-              )
-            ],
+      body: Container(
+        decoration: BoxDecoration(
+            gradient: LinearGradient(
+          colors: [
+            Color.fromRGBO(186, 4, 34, 1.0),
+            Color.fromRGBO(36, 11, 54, 1.0)
+          ],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        )),
+        child: Center(
+          child: Container(
+            child: Image.asset(
+              'assets/launcher/icon_foreground.png',
+              height: 250,
+              width: 250,
+            ),
           ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Image.asset(
-                'assets/launcher/icon_foreground.png',
-                width: 250,
-                height: 250,
-              )
-            ],
-          )
-        ],
+        ),
       ),
+      backgroundColor: Colors.transparent,
     );
   }
 }
