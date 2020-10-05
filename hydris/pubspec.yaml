@@ -24,7 +24,6 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.0 #ios style icons
-  splashscreen: ^1.2.0
 
 dev_dependencies:
   flutter_test:
@@ -52,6 +51,7 @@ flutter:
   #assets section
   assets:
     - assets/splash_screen.png
+    - assets/launcher/icon_foreground.png
 
   #flutter icons sections
  
