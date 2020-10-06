@@ -4,6 +4,6 @@ import 'package:hydris/splashscreen.dart';
 
 void main() {
   runApp(MaterialApp(
-    home: SplashScreen(),
+    home: MyApp(),
   ));
 }
