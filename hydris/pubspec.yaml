@@ -53,9 +53,9 @@ flutter:
     - assets/splash_screen.png
     - assets/launcher/icon_foreground.png
 
-  #flutter icons sections
- 
-  #  ios: true
-  #  android: true
-  #  image_path_ios: "assets/launcher/icon.png"
-  #  image_path_android: "assets/launcher/icon.png"
+  fonts:
+    - family: Montserrat
+      fonts:
+      - asset: fonts/montserrat-regular.ttf
+      - asset: fonts/montserrat-bold.ttf
+        weight: 700
