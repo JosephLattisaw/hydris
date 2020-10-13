@@ -22,6 +22,7 @@ class MyStatefulWidget extends StatefulWidget {
 
 class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   int _selected_index = 0;
+
   static const TextStyle option_style =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widget_options = <Widget>[
@@ -30,13 +31,29 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       style: option_style,
     ),
     Text(
-      "Index 1: Business",
+      "Index 1: Projects",
       style: option_style,
     ),
     Text(
-      "Index 2: School",
+      "Index 2: Proposal",
       style: option_style,
-    )
+    ),
+    Text(
+      "Index 3: Appointment",
+      style: option_style,
+    ),
+    Text(
+      "Index 4: More",
+      style: option_style,
+    ),
+    Text(
+      "Index 4: More",
+      style: option_style,
+    ),
+    Text(
+      "Index 4: More",
+      style: option_style,
+    ),
   ];
 
   void _on_item_tapped(int index) {
@@ -49,7 +66,14 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("BottomNavigatioBar Sample"),
+        leading: Icon(Icons.menu),
+        title: const Text(
+          "H Y D R I S",
+          style: TextStyle(
+            fontFamily: "Montserrat",
+          ),
+        ),
+        centerTitle: true,
       ),
       body: Center(
         child: _widget_options.elementAt(_selected_index),
@@ -61,14 +85,20 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             label: "Home",
           ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.business), label: "Business"),
-          BottomNavigationBarItem(icon: Icon(Icons.school), label: "School")
+              icon: Icon(Icons.business), label: "Projects"),
+          BottomNavigationBarItem(icon: Icon(Icons.add), label: "Proposal"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.calendar_today), label: "Appointment"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.contact_mail), label: "Contact")
         ],
         currentIndex: _selected_index,
         backgroundColor: Colors.blueAccent,
-        unselectedItemColor: Colors.white,
-        selectedItemColor: Colors.amber[800],
+        unselectedItemColor: Colors.black,
+        selectedItemColor: Colors.white,
         onTap: _on_item_tapped,
+        type: BottomNavigationBarType.fixed,
+        elevation: 200.0,
       ),
     );
   }
