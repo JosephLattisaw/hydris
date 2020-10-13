@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:hydris/collapsible_sidebar/custom_navigation_drawer.dart';
+import 'package:hydris/collapsible_sidebar/theme.dart';
 
 class MyApp extends StatelessWidget {
   static const String _title = 'Flutter Code Sample';
@@ -8,7 +10,28 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: _title,
-      home: MyStatefulWidget(),
+      home: MyHomePage(),
+    );
+  }
+}
+
+class MyHomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        elevation: 0.0,
+        backgroundColor: drawer_background_color,
+        title: Text("Collapsing Navigation Drawer/Sidebar"),
+      ),
+      body: Stack(
+        children: <Widget>[
+          Container(
+            color: selected_color,
+          ),
+          CollapsingNavigationDrawer()
+        ],
+      ),
     );
   }
 }
