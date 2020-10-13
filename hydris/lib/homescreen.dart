@@ -10,6 +10,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: _title,
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      debugShowCheckedModeBanner: false,
       home: MyHomePage(),
     );
   }
@@ -23,6 +27,7 @@ class MyHomePage extends StatelessWidget {
         elevation: 0.0,
         backgroundColor: drawer_background_color,
         title: Text("Collapsing Navigation Drawer/Sidebar"),
+        centerTitle: true,
       ),
       body: Stack(
         children: <Widget>[
@@ -36,6 +41,7 @@ class MyHomePage extends StatelessWidget {
   }
 }
 
+//TODO remove the below code
 class MyStatefulWidget extends StatefulWidget {
   MyStatefulWidget({Key key}) : super(key: key);
 
