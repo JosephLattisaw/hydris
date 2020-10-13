@@ -4,58 +4,58 @@ import 'package:flutter/material.dart';
 class CollapsingListTile extends StatefulWidget {
   final String title;
   final IconData icon;
-  final AnimationController animation_controller;
-  final bool is_selected;
-  final Function on_tap;
+  final AnimationController animationController;
+  final bool isSelected;
+  final Function onTap;
 
   CollapsingListTile(
       {@required this.title,
       @required this.icon,
-      @required this.animation_controller,
-      this.is_selected = false,
-      this.on_tap});
+      @required this.animationController,
+      this.isSelected = false,
+      this.onTap});
 
   @override
   _CollapsingListTileState createState() => _CollapsingListTileState();
 }
 
 class _CollapsingListTileState extends State<CollapsingListTile> {
-  Animation<double> width_animation, sized_box_animation;
+  Animation<double> widthAnimation, sizedBoxAnimation;
 
   @override
   void initState() {
     super.initState();
-    width_animation =
-        Tween<double>(begin: 200, end: 0).animate(widget.animation_controller);
-    sized_box_animation =
-        Tween<double>(begin: 10, end: 0).animate(widget.animation_controller);
+    widthAnimation =
+        Tween<double>(begin: 200, end: 0).animate(widget.animationController);
+    sizedBoxAnimation =
+        Tween<double>(begin: 10, end: 0).animate(widget.animationController);
   }
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: widget.on_tap,
+      onTap: widget.onTap,
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(16.0)),
           color: Colors.transparent,
         ),
-        width: width_animation.value,
+        width: widthAnimation.value,
         margin: EdgeInsets.symmetric(horizontal: 8.0),
         padding: EdgeInsets.symmetric(horizontal: 8.0, vertical: 8.0),
         child: Row(
           children: <Widget>[
             Icon(
               widget.icon,
-              color: widget.is_selected ? selected_color : Colors.white30,
+              color: widget.isSelected ? selected_color : Colors.white30,
               size: 30.0,
             ),
             SizedBox(
-              width: sized_box_animation.value,
+              width: sizedBoxAnimation.value,
             ),
-            (width_animation.value >= 100)
+            (widthAnimation.value >= 100)
                 ? Text(widget.title,
-                    style: widget.is_selected
+                    style: widget.isSelected
                         ? list_title_selected_text_style
                         : list_title_default_text_style)
                 : Container()

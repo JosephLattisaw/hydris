@@ -2,27 +2,34 @@ import '../custom_navigation_drawer.dart';
 import 'package:flutter/material.dart';
 
 class CollapsingNavigationDrawer extends StatefulWidget {
+  final Function onTap;
+
+  CollapsingNavigationDrawer({this.onTap});
+
   @override
   CollapsingNavigationDrawerState createState() {
-    return CollapsingNavigationDrawerState();
+    return CollapsingNavigationDrawerState(onTap: onTap);
   }
 }
 
 class CollapsingNavigationDrawerState extends State<CollapsingNavigationDrawer>
     with SingleTickerProviderStateMixin {
-  double max_width = 250;
-  double min_width = 70;
-  bool is_collapsed = false;
+  static const double MAX_WIDTH = 250;
+  static const double MIN_WIDTH = 70;
+  bool _isCollapsed = false;
   AnimationController _animationController;
-  Animation<double> width_animation;
-  int current_selected_index = 0;
+  Animation<double> widthAnimation;
+  int currentSelectedIndex = 0;
+  final Function onTap;
+
+  CollapsingNavigationDrawerState({this.onTap});
 
   @override
   void initState() {
     super.initState();
     _animationController =
         AnimationController(vsync: this, duration: Duration(milliseconds: 300));
-    width_animation = Tween<double>(begin: max_width, end: min_width)
+    widthAnimation = Tween<double>(begin: MAX_WIDTH, end: MIN_WIDTH)
         .animate(_animationController);
   }
 
@@ -30,22 +37,22 @@ class CollapsingNavigationDrawerState extends State<CollapsingNavigationDrawer>
   Widget build(BuildContext context) {
     return AnimatedBuilder(
       animation: _animationController,
-      builder: (context, child) => get_widget(context, widget),
+      builder: (context, child) => getWidget(context, widget),
     );
   }
 
-  Widget get_widget(context, widget) {
+  Widget getWidget(context, widget) {
     return Material(
       elevation: 80.0,
       child: Container(
-        width: width_animation.value,
+        width: widthAnimation.value,
         color: drawer_background_color,
         child: Column(
           children: <Widget>[
             CollapsingListTile(
               title: 'Guest',
               icon: Icons.person,
-              animation_controller: _animationController,
+              animationController: _animationController,
             ),
             Divider(
               color: Colors.grey,
@@ -62,11 +69,14 @@ class CollapsingNavigationDrawerState extends State<CollapsingNavigationDrawer>
                   return CollapsingListTile(
                     title: navigation_items[counter].title,
                     icon: navigation_items[counter].icon,
-                    animation_controller: _animationController,
-                    is_selected: current_selected_index == counter,
-                    on_tap: () {
+                    animationController: _animationController,
+                    isSelected: currentSelectedIndex == counter,
+                    onTap: () {
                       setState(() {
-                        current_selected_index = counter;
+                        if (currentSelectedIndex != counter) {
+                          currentSelectedIndex = counter;
+                          onTap(currentSelectedIndex);
+                        }
                       });
                     },
                   );
@@ -77,8 +87,8 @@ class CollapsingNavigationDrawerState extends State<CollapsingNavigationDrawer>
             InkWell(
               onTap: () {
                 setState(() {
-                  is_collapsed = !is_collapsed;
-                  is_collapsed
+                  _isCollapsed = !_isCollapsed;
+                  _isCollapsed
                       ? _animationController.forward()
                       : _animationController.reverse();
                 });
