@@ -26,7 +26,12 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(
         elevation: 0.0,
         backgroundColor: drawer_background_color,
-        title: Text("Collapsing Navigation Drawer/Sidebar"),
+        title: const Text(
+          "H Y D R I S",
+          style: TextStyle(
+            fontFamily: "Montserrat",
+          ),
+        ),
         centerTitle: true,
       ),
       body: Stack(

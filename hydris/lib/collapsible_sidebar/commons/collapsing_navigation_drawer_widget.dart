@@ -10,7 +10,7 @@ class CollapsingNavigationDrawer extends StatefulWidget {
 
 class CollapsingNavigationDrawerState extends State<CollapsingNavigationDrawer>
     with SingleTickerProviderStateMixin {
-  double max_width = 210;
+  double max_width = 250;
   double min_width = 70;
   bool is_collapsed = false;
   AnimationController _animationController;

@@ -8,9 +8,12 @@ class NavigationModel {
 }
 
 List<NavigationModel> navigation_items = [
-  NavigationModel(title: "Dashboard", icon: Icons.insert_chart),
-  NavigationModel(title: "Errors", icon: Icons.error),
-  NavigationModel(title: "Search", icon: Icons.search),
-  NavigationModel(title: "Notifications", icon: Icons.notifications),
-  NavigationModel(title: "Settings", icon: Icons.settings),
+  NavigationModel(title: "Home", icon: Icons.home),
+  NavigationModel(title: "Events", icon: Icons.update),
+  NavigationModel(title: "Upcoming Bids", icon: Icons.announcement),
+  NavigationModel(title: "Proposal", icon: Icons.add),
+  NavigationModel(title: "Project", icon: Icons.construction),
+  NavigationModel(title: "Appointment", icon: Icons.calendar_today),
+  NavigationModel(title: "About", icon: Icons.info),
+  NavigationModel(title: "Contact", icon: Icons.contact_mail),
 ];
