@@ -38,7 +38,7 @@ class _CollapsingListTileState extends State<CollapsingListTile> {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(16.0)),
-          color: widget.is_selected ? selected_color : Colors.transparent,
+          color: Colors.transparent,
         ),
         width: width_animation.value,
         margin: EdgeInsets.symmetric(horizontal: 8.0),
