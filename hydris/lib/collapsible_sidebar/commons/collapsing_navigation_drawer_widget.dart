@@ -43,7 +43,7 @@ class CollapsingNavigationDrawerState extends State<CollapsingNavigationDrawer>
         child: Column(
           children: <Widget>[
             CollapsingListTile(
-              title: 'Techie',
+              title: 'Guest',
               icon: Icons.person,
               animation_controller: _animationController,
             ),
@@ -63,6 +63,7 @@ class CollapsingNavigationDrawerState extends State<CollapsingNavigationDrawer>
                     title: navigation_items[counter].title,
                     icon: navigation_items[counter].icon,
                     animation_controller: _animationController,
+                    is_selected: current_selected_index == counter,
                     on_tap: () {
                       setState(() {
                         current_selected_index = counter;
@@ -86,7 +87,7 @@ class CollapsingNavigationDrawerState extends State<CollapsingNavigationDrawer>
                 icon: AnimatedIcons.close_menu,
                 progress: _animationController,
                 color: selected_color,
-                size: 50.0,
+                size: 38.0,
               ),
             ),
             SizedBox(
