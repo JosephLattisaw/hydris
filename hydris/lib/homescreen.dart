@@ -27,10 +27,27 @@ class HomeScreenState extends State<HomeScreenWidget> {
     return Scaffold(
       appBar: AppBar(
         elevation: 0.0,
-        title: const Text(
+        /* title: const Text(
           "H Y D R I S",
           style: TextStyle(
             fontFamily: "Montserrat",
+          ),
+        ),*/
+        title: Container(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset(
+                "assets/launcher/icon_foreground.png",
+                height: 30,
+                width: 30,
+              ),
+              Text('HYDRIS'),
+              SizedBox(
+                height: 30,
+                width: 30,
+              )
+            ],
           ),
         ),
         centerTitle: true,
