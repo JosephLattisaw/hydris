@@ -13,8 +13,8 @@ class _SplashScreenState extends State<SplashScreen> {
           decoration: BoxDecoration(
               gradient: LinearGradient(
             colors: [
-              Color.fromRGBO(186, 4, 26, 1.0),
-              Color.fromRGBO(36, 11, 36, 1.0)
+              Color.fromRGBO(0, 5, 38, 1.0),
+              Color.fromRGBO(210, 0, 2, 1.0),
             ],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
