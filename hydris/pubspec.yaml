@@ -53,6 +53,10 @@ flutter:
     - assets/splash_screen.png
     - assets/launcher/icon_foreground.png
     - assets/1796.jpg
+    - assets/bg-04.jpg
+    - assets/train_builder.jpg
+    - assets/train_builder2.jpg
+    - assets/1598.jpg
 
   fonts:
     - family: Montserrat

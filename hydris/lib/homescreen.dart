@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:hydris/main_drawer.dart';
 import 'dart:developer'; //needed for log
@@ -38,6 +40,9 @@ class HomeScreenWidget extends StatefulWidget {
 }
 
 class HomeScreenState extends State<HomeScreenWidget> {
+  final timeout = const Duration(seconds: 3);
+  final ms = const Duration(milliseconds: 1);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -63,6 +68,32 @@ class HomeScreenState extends State<HomeScreenWidget> {
         centerTitle: true,
       ),
       drawer: MainDrawer(),
+      body: Stack(
+        children: [
+          Container(
+            decoration: BoxDecoration(
+                image: DecorationImage(
+                    alignment: Alignment.centerLeft,
+                    image: AssetImage('assets/1598.jpg'),
+                    fit: BoxFit.cover)),
+          ),
+          Center(
+            child: RaisedButton(
+              onPressed: () {},
+              color: Colors.orange[900],
+              textColor: Colors.white,
+              elevation: 130,
+              child: Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: Text(
+                  'Learn More',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                ),
+              ),
+            ),
+          )
+        ],
+      ),
     );
   }
 }
