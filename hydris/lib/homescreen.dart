@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hydris/main_drawer.dart';
 import 'dart:developer'; //needed for log
 
 Map<int, Color> custom_swatch_color = {
@@ -42,30 +43,14 @@ class HomeScreenState extends State<HomeScreenWidget> {
     return Scaffold(
       appBar: AppBar(
         elevation: 0.0,
-        title: Container(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Image.asset(
-                "assets/launcher/icon_foreground.png",
-                height: 30,
-                width: 30,
-              ),
-              const Text(
-                "H Y D R I S",
-                style: TextStyle(
-                  fontFamily: "Montserrat",
-                ),
-              ),
-              SizedBox(
-                height: 30,
-                width: 30,
-              )
-            ],
-          ),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisSize: MainAxisSize.min,
+          children: [Text("test"), Text("test2")],
         ),
         centerTitle: true,
       ),
+      drawer: MainDrawer(),
     );
   }
 }
