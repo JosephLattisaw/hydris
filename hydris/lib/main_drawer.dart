@@ -8,38 +8,32 @@ class MainDrawer extends StatelessWidget {
       children: <Widget>[
         Container(
           width: double.infinity,
-          padding: EdgeInsets.all(20),
+          padding: EdgeInsets.only(bottom: 10),
           color: Theme.of(context).primaryColor,
           child: Center(
             child: Column(
               children: <Widget>[
                 Container(
-                  width: 100,
-                  height: 100,
+                  height: 150,
                   margin: EdgeInsets.only(top: 30, bottom: 10),
                   decoration: BoxDecoration(
-                      shape: BoxShape.circle,
+                      shape: BoxShape.rectangle,
                       image: DecorationImage(
-                          image: NetworkImage(
-                              'https://avatars1.githubusercontent.com/u/11042297?s=400&u=df03bca17449b0b41aa7e1d524122255c301b2c7&v=4'),
-                          fit: BoxFit.fill)),
+                          image: AssetImage('assets/1796.jpg'),
+                          fit: BoxFit.cover)),
                 ),
                 Text(
-                  'Pradip Debnath',
+                  'Menu',
                   style: TextStyle(fontSize: 22, color: Colors.white),
-                ),
-                Text(
-                  'itzpradip@gmail.com',
-                  style: TextStyle(color: Colors.white),
                 ),
               ],
             ),
           ),
         ),
         ListTile(
-          leading: Icon(Icons.person),
+          leading: Icon(Icons.home),
           title: Text(
-            'Profile',
+            'Home',
             style: TextStyle(
               fontSize: 18,
             ),
@@ -47,24 +41,85 @@ class MainDrawer extends StatelessWidget {
           onTap: () {},
         ),
         ListTile(
-          leading: Icon(Icons.settings),
+          leading: Icon(Icons.assignment),
           title: Text(
-            'Settings',
+            'Events',
             style: TextStyle(
               fontSize: 18,
             ),
           ),
-          onTap: null,
+          onTap: () {},
         ),
         ListTile(
-          leading: Icon(Icons.arrow_back),
+          leading: Icon(Icons.lock_clock),
           title: Text(
-            'Logout',
+            'Upcoming Bids',
             style: TextStyle(
               fontSize: 18,
             ),
           ),
-          onTap: null,
+          onTap: () {},
+        ),
+        ListTile(
+          leading: Icon(Icons.add_circle),
+          title: Text(
+            'Solicitation RFPs',
+            style: TextStyle(
+              fontSize: 18,
+            ),
+          ),
+          onTap: () {},
+        ),
+        ListTile(
+          leading: Icon(Icons.construction),
+          title: Text(
+            'Projects',
+            style: TextStyle(
+              fontSize: 18,
+            ),
+          ),
+          onTap: () {},
+        ),
+        ListTile(
+          leading: Icon(Icons.today),
+          title: Text(
+            'Appointment',
+            style: TextStyle(
+              fontSize: 18,
+            ),
+          ),
+          onTap: () {},
+        ),
+        ListTile(
+          leading: Icon(Icons.info),
+          title: Text(
+            'About',
+            style: TextStyle(
+              fontSize: 18,
+            ),
+          ),
+          onTap: () {},
+        ),
+        ListTile(
+          leading: Icon(Icons.contact_mail),
+          title: Text(
+            'Contact',
+            style: TextStyle(
+              fontSize: 18,
+            ),
+          ),
+          onTap: () {},
+        ),
+        ListTile(),
+        ListTile(
+          leading: Icon(Icons.person),
+          title: Text(
+            'Sign In',
+            style: TextStyle(
+              fontSize: 18,
+            ),
+          ),
+          onTap: () {},
         ),
       ],
     ));
