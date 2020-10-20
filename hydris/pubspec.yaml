@@ -57,6 +57,14 @@ flutter:
     - assets/train_builder.jpg
     - assets/train_builder2.jpg
     - assets/1598.jpg
+    - assets/png-icon-01.png
+    - assets/png-icon-02.png
+    - assets/png-icon-03.png
+    - assets/png-icon-04.png
+    - assets/png-icon-05.png
+    - assets/png-icon-06.png
+    - assets/png-icon-07.png
+    - assets/bg-01.jpg
 
   fonts:
     - family: Montserrat

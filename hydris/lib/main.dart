@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hydris/homescreen.dart';
+import 'package:hydris/screens/home_screen/home_screen.dart';
 import 'package:hydris/splashscreen.dart';
 
 void main() {
