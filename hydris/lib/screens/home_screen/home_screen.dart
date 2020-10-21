@@ -2,6 +2,10 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:hydris/main_drawer.dart';
+import 'package:hydris/screens/home_screen/widgets/expertise_widget.dart';
+import 'package:hydris/screens/home_screen/widgets/features_title_widget.dart';
+import 'package:hydris/screens/home_screen/widgets/quality_construction_widget.dart';
+import 'package:hydris/screens/home_screen/widgets/real_quality_widget.dart';
 import 'dart:developer';
 
 import 'package:hydris/screens/home_screen/widgets/slogan_widget.dart'; //needed for log
@@ -77,9 +81,6 @@ class HomeScreenState extends State<HomeScreenWidget> {
               Container(
                 height: 600,
                 decoration: BoxDecoration(
-                    //borderRadius: BorderRadius.only(
-                    //  bottomLeft: Radius.circular(20),
-                    //bottomRight: Radius.circular(20)),
                     image: DecorationImage(
                         alignment: Alignment.centerLeft,
                         image: AssetImage('assets/1598.jpg'),
@@ -87,26 +88,7 @@ class HomeScreenState extends State<HomeScreenWidget> {
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 12.0, top: 20.0),
-                child: Stack(children: [
-                  Text(
-                    "QUALITY CONSTRUCTION",
-                    style: TextStyle(
-                      fontSize: 30,
-                      fontWeight: FontWeight.bold,
-                      foreground: Paint()
-                        ..style = PaintingStyle.stroke
-                        ..strokeWidth = 2
-                        ..color = Colors.blue[900],
-                    ),
-                  ),
-                  Text(
-                    "QUALITY CONSTRUCTION",
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 30,
-                        fontWeight: FontWeight.bold),
-                  ),
-                ]),
+                child: QualityConstructionWidget(),
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 40.0, top: 50.0),
@@ -352,37 +334,7 @@ class HomeScreenState extends State<HomeScreenWidget> {
                     SizedBox(
                       width: 10,
                     ),
-                    Flexible(
-                      child: Container(
-                        width: 200,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.all(Radius.circular(10)),
-                          color: Color.fromRGBO(255, 255, 255, 0.6),
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Text(
-                              "EXPERTISE",
-                              style: TextStyle(
-                                color: Colors.blue[900],
-                                fontWeight: FontWeight.bold,
-                                fontSize: 22,
-                              ),
-                            ),
-                            Text(
-                              "Save time and money by letting Hydris handle every aspect of your construction project.",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                color: Colors.blue[900],
-                                fontSize: 16,
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                    )
+                    Flexible(child: ExpertiseWidget())
                   ],
                 ),
               ),
@@ -408,63 +360,14 @@ class HomeScreenState extends State<HomeScreenWidget> {
                     SizedBox(
                       width: 10,
                     ),
-                    Flexible(
-                      child: Container(
-                        width: 200,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.all(Radius.circular(10)),
-                          color: Color.fromRGBO(255, 255, 255, 0.6),
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Text(
-                              "REAL QUALITY",
-                              style: TextStyle(
-                                color: Colors.blue[900],
-                                fontWeight: FontWeight.bold,
-                                fontSize: 22,
-                              ),
-                            ),
-                            Text(
-                              "Hydris uses the highest quality materials for your project, guaranteeing you the best results.",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                color: Colors.blue[900],
-                                fontSize: 16,
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                    )
+                    Flexible(child: RealQualityWidget())
                   ],
                 ),
               ),
             ),
             Positioned(
               left: 5,
-              child: Stack(children: [
-                Text(
-                  "FEATURES",
-                  style: TextStyle(
-                    fontSize: 60,
-                    fontWeight: FontWeight.bold,
-                    foreground: Paint()
-                      ..style = PaintingStyle.stroke
-                      ..strokeWidth = .4
-                      ..color = Colors.white,
-                  ),
-                ),
-                Text(
-                  "FEATURES",
-                  style: TextStyle(
-                      color: Colors.transparent,
-                      fontSize: 60,
-                      fontWeight: FontWeight.bold),
-                ),
-              ]),
+              child: FeaturesTitleWidget(),
             ),
             Positioned(
               top: 95,
