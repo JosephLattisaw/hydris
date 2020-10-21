@@ -227,7 +227,7 @@ class _ContactScreenState extends State<ContactScreen> {
                     height: 10,
                   ),
                   Container(
-                    color: Colors.yellow,
+                    color: Theme.of(context).primaryColor,
                     child: Column(
                       children: [
                         Row(
@@ -250,42 +250,42 @@ class _ContactScreenState extends State<ContactScreen> {
                             RaisedButton(
                               onPressed: () {
                                 setState(() {
-                                  toggleServicesIndex = 0;
+                                  toggleServicesIndex = 1;
                                 });
                               },
                               shape: RoundedRectangleBorder(
                                   side: BorderSide(
                                       color: Colors.orange[900], width: 2.0)),
-                              child: Text("Quote"),
-                              color: toggleServicesIndex == 0
+                              child: Text("Proposal"),
+                              color: toggleServicesIndex == 1
                                   ? Colors.orange[900]
                                   : Colors.white,
                             ),
                             RaisedButton(
                               onPressed: () {
                                 setState(() {
-                                  toggleServicesIndex = 0;
+                                  toggleServicesIndex = 2;
                                 });
                               },
                               shape: RoundedRectangleBorder(
                                   side: BorderSide(
                                       color: Colors.orange[900], width: 2.0)),
-                              child: Text("Quote"),
-                              color: toggleServicesIndex == 0
+                              child: Text("Questions"),
+                              color: toggleServicesIndex == 2
                                   ? Colors.orange[900]
                                   : Colors.white,
                             ),
                             RaisedButton(
                               onPressed: () {
                                 setState(() {
-                                  toggleServicesIndex = 0;
+                                  toggleServicesIndex = 3;
                                 });
                               },
                               shape: RoundedRectangleBorder(
                                   side: BorderSide(
                                       color: Colors.orange[900], width: 2.0)),
-                              child: Text("Quote"),
-                              color: toggleServicesIndex == 0
+                              child: Text("Job Application"),
+                              color: toggleServicesIndex == 3
                                   ? Colors.orange[900]
                                   : Colors.white,
                             ),
