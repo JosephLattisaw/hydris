@@ -117,6 +117,7 @@ class _ContactScreenState extends State<ContactScreen> {
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                   ),
                   Container(
+                    width: MediaQuery.of(context).size.width * .75,
                     child: Column(
                       children: [
                         TextField(
@@ -181,6 +182,7 @@ class _ContactScreenState extends State<ContactScreen> {
                   Expanded(
                     child: Container(
                       height: double.infinity,
+                      width: MediaQuery.of(context).size.width * .75,
                       child: TextField(
                         keyboardType: TextInputType.multiline,
                         decoration: InputDecoration(
