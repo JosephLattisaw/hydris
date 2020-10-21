@@ -230,66 +230,76 @@ class _ContactScreenState extends State<ContactScreen> {
                     color: Theme.of(context).primaryColor,
                     child: Column(
                       children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            RaisedButton(
-                              onPressed: () {
-                                setState(() {
-                                  toggleServicesIndex = 0;
-                                });
-                              },
-                              shape: RoundedRectangleBorder(
-                                  side: BorderSide(
-                                      color: Colors.orange[900], width: 2.0)),
-                              child: Text("Quote"),
-                              color: toggleServicesIndex == 0
-                                  ? Colors.orange[900]
-                                  : Colors.white,
-                            ),
-                            RaisedButton(
-                              onPressed: () {
-                                setState(() {
-                                  toggleServicesIndex = 1;
-                                });
-                              },
-                              shape: RoundedRectangleBorder(
-                                  side: BorderSide(
-                                      color: Colors.orange[900], width: 2.0)),
-                              child: Text("Proposal"),
-                              color: toggleServicesIndex == 1
-                                  ? Colors.orange[900]
-                                  : Colors.white,
-                            ),
-                            RaisedButton(
-                              onPressed: () {
-                                setState(() {
-                                  toggleServicesIndex = 2;
-                                });
-                              },
-                              shape: RoundedRectangleBorder(
-                                  side: BorderSide(
-                                      color: Colors.orange[900], width: 2.0)),
-                              child: Text("Questions"),
-                              color: toggleServicesIndex == 2
-                                  ? Colors.orange[900]
-                                  : Colors.white,
-                            ),
-                            RaisedButton(
-                              onPressed: () {
-                                setState(() {
-                                  toggleServicesIndex = 3;
-                                });
-                              },
-                              shape: RoundedRectangleBorder(
-                                  side: BorderSide(
-                                      color: Colors.orange[900], width: 2.0)),
-                              child: Text("Job Application"),
-                              color: toggleServicesIndex == 3
-                                  ? Colors.orange[900]
-                                  : Colors.white,
-                            ),
-                          ],
+                        Text(
+                          "Select which service below you wish to inquire about:",
+                          style: TextStyle(color: Colors.white, fontSize: 14),
+                        ),
+                        Container(
+                          decoration: BoxDecoration(
+                              border: Border.all(
+                                  color: Colors.white24,
+                                  style: BorderStyle.solid)),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              RaisedButton(
+                                onPressed: () {
+                                  setState(() {
+                                    toggleServicesIndex = 0;
+                                  });
+                                },
+                                shape: RoundedRectangleBorder(
+                                    side: BorderSide(
+                                        color: Colors.orange[900], width: 2.0)),
+                                child: Text("Quote"),
+                                color: toggleServicesIndex == 0
+                                    ? Colors.orange[900]
+                                    : Colors.white,
+                              ),
+                              RaisedButton(
+                                onPressed: () {
+                                  setState(() {
+                                    toggleServicesIndex = 1;
+                                  });
+                                },
+                                shape: RoundedRectangleBorder(
+                                    side: BorderSide(
+                                        color: Colors.orange[900], width: 2.0)),
+                                child: Text("Proposal"),
+                                color: toggleServicesIndex == 1
+                                    ? Colors.orange[900]
+                                    : Colors.white,
+                              ),
+                              RaisedButton(
+                                onPressed: () {
+                                  setState(() {
+                                    toggleServicesIndex = 2;
+                                  });
+                                },
+                                shape: RoundedRectangleBorder(
+                                    side: BorderSide(
+                                        color: Colors.orange[900], width: 2.0)),
+                                child: Text("Questions"),
+                                color: toggleServicesIndex == 2
+                                    ? Colors.orange[900]
+                                    : Colors.white,
+                              ),
+                              RaisedButton(
+                                onPressed: () {
+                                  setState(() {
+                                    toggleServicesIndex = 3;
+                                  });
+                                },
+                                shape: RoundedRectangleBorder(
+                                    side: BorderSide(
+                                        color: Colors.orange[900], width: 2.0)),
+                                child: Text("Job Application"),
+                                color: toggleServicesIndex == 3
+                                    ? Colors.orange[900]
+                                    : Colors.white,
+                              ),
+                            ],
+                          ),
                         ),
                         RaisedButton(
                           elevation: 20,
