@@ -10,29 +10,10 @@ import 'dart:developer';
 
 import 'package:hydris/screens/home_screen/widgets/slogan_widget.dart'; //needed for log
 
-Map<int, Color> custom_swatch_color = {
-  //TODO this should match the context file
-  //TODO should optimize this into some type of function
-  50: Color.fromRGBO(0, 48, 71, .1),
-  100: Color.fromRGBO(0, 48, 71, .2),
-  200: Color.fromRGBO(0, 48, 71, .3),
-  300: Color.fromRGBO(0, 48, 71, .4),
-  400: Color.fromRGBO(0, 48, 71, .5),
-  500: Color.fromRGBO(0, 48, 71, .6),
-  600: Color.fromRGBO(0, 48, 71, .7),
-  700: Color.fromRGBO(0, 48, 71, .8),
-  800: Color.fromRGBO(0, 48, 71, .9),
-  900: Color.fromRGBO(0, 48, 71, 1),
-};
-
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'HYDRIS',
-      theme: ThemeData(
-        primarySwatch: MaterialColor(0xFF003065, custom_swatch_color),
-      ),
       home: HomeScreenWidget(),
     );
   }
