@@ -219,7 +219,7 @@ class _ContactScreenState extends State<ContactScreen> {
                             color: Colors.blue[900],
                           ),
                         ),
-                        maxLines: 20,
+                        maxLines: double.maxFinite.toInt(),
                       ),
                     ),
                   ),
