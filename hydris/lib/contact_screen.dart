@@ -72,8 +72,8 @@ class _ContactScreenState extends State<ContactScreen> {
                                       borderRadius: BorderRadius.circular(5.0)),
                                   child: Column(
                                     children: [
-                                      Icon(Icons.location_on),
-                                      Text("123 Street Ave.")
+                                      Icon(Icons.phone),
+                                      Text("1-800-HYDRIS.")
                                     ],
                                   ),
                                 ),
@@ -86,8 +86,8 @@ class _ContactScreenState extends State<ContactScreen> {
                                       borderRadius: BorderRadius.circular(5.0)),
                                   child: Column(
                                     children: [
-                                      Icon(Icons.location_on),
-                                      Text("123 Street Ave.")
+                                      Icon(Icons.mail),
+                                      Text("email@hydris")
                                     ],
                                   ),
                                 ),
