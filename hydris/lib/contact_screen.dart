@@ -78,6 +78,9 @@ class _ContactScreenState extends State<ContactScreen> {
                                   ),
                                 ),
                               ),
+                              SizedBox(
+                                width: 4,
+                              ),
                               Expanded(
                                 child: RaisedButton(
                                   color: Colors.orange[900],
@@ -91,6 +94,9 @@ class _ContactScreenState extends State<ContactScreen> {
                                     ],
                                   ),
                                 ),
+                              ),
+                              SizedBox(
+                                width: 4,
                               ),
                               Expanded(
                                 child: RaisedButton(
