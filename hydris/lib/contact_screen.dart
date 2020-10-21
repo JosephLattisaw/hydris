@@ -112,9 +112,15 @@ class _ContactScreenState extends State<ContactScreen> {
                       ],
                     ),
                   ),
+                  SizedBox(
+                    height: 10,
+                  ),
                   Text(
                     "Send us a message",
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(
+                    height: 10,
                   ),
                   Container(
                     width: MediaQuery.of(context).size.width * .75,
@@ -139,6 +145,9 @@ class _ContactScreenState extends State<ContactScreen> {
                           ),
                           style: TextStyle(fontSize: 16.0, color: Colors.black),
                         ),
+                        SizedBox(
+                          height: 4,
+                        ),
                         TextField(
                           decoration: InputDecoration(
                             enabledBorder: OutlineInputBorder(
@@ -157,6 +166,9 @@ class _ContactScreenState extends State<ContactScreen> {
                             contentPadding: EdgeInsets.all(0),
                           ),
                           style: TextStyle(fontSize: 16.0, color: Colors.black),
+                        ),
+                        SizedBox(
+                          height: 4,
                         ),
                         TextField(
                           decoration: InputDecoration(
@@ -178,6 +190,9 @@ class _ContactScreenState extends State<ContactScreen> {
                         ),
                       ],
                     ),
+                  ),
+                  SizedBox(
+                    height: 4,
                   ),
                   Expanded(
                     child: Container(
@@ -201,6 +216,9 @@ class _ContactScreenState extends State<ContactScreen> {
                         maxLines: 20,
                       ),
                     ),
+                  ),
+                  SizedBox(
+                    height: 10,
                   ),
                   Container(
                     color: Colors.yellow,
