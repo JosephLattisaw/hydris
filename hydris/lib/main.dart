@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hydris/screens/home_screen/home_screen.dart';
 import 'package:hydris/contact_screen.dart';
 import 'package:hydris/splashscreen.dart';
+import 'package:hydris/about_us_screen.dart';
 
 Map<int, Color> custom_swatch_color = {
   //TODO this should match the context file
@@ -20,7 +21,7 @@ Map<int, Color> custom_swatch_color = {
 
 void main() {
   runApp(MaterialApp(
-    home: ContactScreen(),
+    home: AboutUsScreen(),
     title: 'HYDRIS',
     theme: ThemeData(
       primarySwatch: MaterialColor(0xFF003065, custom_swatch_color),
