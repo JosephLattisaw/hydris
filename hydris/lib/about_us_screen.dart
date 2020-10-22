@@ -33,8 +33,42 @@ class _AboutUsScreenState extends State<AboutUsScreen> {
                 Colors.black.withOpacity(.6),
               ])),
             ),
-            Container(
-              decoration: BoxDecoration(),
+            Align(
+              child: Container(
+                margin: EdgeInsets.only(top: 20.0, bottom: 20.0),
+                width: MediaQuery.of(context).size.width * .75,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(10)),
+                  color: Color.fromRGBO(0, 0, 0, 0.6),
+                ),
+                child: Column(
+                  children: [
+                    Text(
+                      "About Us",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 30,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    Container(
+                      height: 4.0,
+                      width: MediaQuery.of(context).size.width * .50,
+                      color: Colors.white.withOpacity(0.7),
+                    ),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    Text(
+                      "Hydris is a veteran owned small business that has been in business since October of 2016. We are a DC based firm limited liability corporation that is VOB, MBE, 8a (pending) registered general contracting in the capital district. Hydris is 100% owned by a former veteran with the United States Army of Eight years with the infantry/Intel battalions. Our executive team is staffed with former veterans with a combined knowledge of 40 years of IT support, Construction management, Engineering, Physical Security, Access Controls, Telecommunications, Financial Management, Human Resourcing and Staffing, Intelligence and Insurance Related products.",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 18,
+                      ),
+                      textAlign: TextAlign.center,
+                    )
+                  ],
+                ),
+              ),
             )
           ],
         ),
