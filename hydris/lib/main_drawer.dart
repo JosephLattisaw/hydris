@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hydris/about_us_screen.dart';
 import 'package:hydris/contact_screen.dart';
 import 'package:hydris/screens/home_screen/home_screen.dart';
+import 'package:hydris/upcoming_bids.dart';
 
 class MainDrawer extends StatelessWidget {
   @override
@@ -68,7 +69,14 @@ class MainDrawer extends StatelessWidget {
               fontSize: 18,
             ),
           ),
-          onTap: () {},
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => UpcomingBids(),
+              ),
+            );
+          },
         ),
         ListTile(
           leading: Icon(Icons.add_circle),
