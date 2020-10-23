@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:hydris/about_us_screen.dart';
+import 'package:hydris/contact_screen.dart';
 import 'package:hydris/screens/home_screen/home_screen.dart';
 
 class MainDrawer extends StatelessWidget {
@@ -106,7 +108,14 @@ class MainDrawer extends StatelessWidget {
               fontSize: 18,
             ),
           ),
-          onTap: () {},
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => AboutUsScreen(),
+              ),
+            );
+          },
         ),
         ListTile(
           leading: Icon(Icons.contact_mail),
@@ -116,7 +125,14 @@ class MainDrawer extends StatelessWidget {
               fontSize: 18,
             ),
           ),
-          onTap: () {},
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => ContactScreen(),
+              ),
+            );
+          },
         ),
         ListTile(),
         ListTile(
