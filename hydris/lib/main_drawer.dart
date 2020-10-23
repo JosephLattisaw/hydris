@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hydris/about_us_screen.dart';
 import 'package:hydris/contact_screen.dart';
 import 'package:hydris/screens/home_screen/home_screen.dart';
+import 'package:hydris/solicitation_rfps.dart';
 import 'package:hydris/upcoming_bids.dart';
 
 class MainDrawer extends StatelessWidget {
@@ -86,7 +87,14 @@ class MainDrawer extends StatelessWidget {
               fontSize: 18,
             ),
           ),
-          onTap: () {},
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => SolicitationRFPs(),
+              ),
+            );
+          },
         ),
         ListTile(
           leading: Icon(Icons.construction),
