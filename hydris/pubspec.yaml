@@ -24,6 +24,10 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.0 #ios style icons
+  video_player: #Using GIT Patch until https://github.com/flutter/flutter/issues/66627 is resolved
+    git:
+      url: git://github.com/ponnamkarthik/plugins.git
+      path: packages/video_player/video_player
 
 dev_dependencies:
   flutter_test:
@@ -68,6 +72,7 @@ flutter:
     - assets/png-img-18.png
     - assets/4465530.png
     - assets/american-flag-3001893.png
+    - assets/file.mp4
 
   fonts:
     - family: Montserrat
