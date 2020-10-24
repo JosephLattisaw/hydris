@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:hydris/about_us_screen.dart';
+import 'package:hydris/appointments_screen.dart';
 import 'package:hydris/contact_screen.dart';
+import 'package:hydris/events_screen.dart';
+import 'package:hydris/projects_screen.dart';
 import 'package:hydris/screens/home_screen/home_screen.dart';
-import 'package:hydris/solicitation_rfps.dart';
-import 'package:hydris/upcoming_bids.dart';
+import 'package:hydris/solicitation_rfps_screen.dart';
+import 'package:hydris/upcoming_bids_screen.dart';
 
 class MainDrawer extends StatelessWidget {
   @override
@@ -60,7 +63,14 @@ class MainDrawer extends StatelessWidget {
               fontSize: 18,
             ),
           ),
-          onTap: () {},
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => EventsScreen(),
+              ),
+            );
+          },
         ),
         ListTile(
           leading: Icon(Icons.lock_clock),
@@ -74,7 +84,7 @@ class MainDrawer extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => UpcomingBids(),
+                builder: (context) => UpcomingBidsScreen(),
               ),
             );
           },
@@ -91,7 +101,7 @@ class MainDrawer extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => SolicitationRFPs(),
+                builder: (context) => SolicitationRFPSScreen(),
               ),
             );
           },
@@ -104,7 +114,14 @@ class MainDrawer extends StatelessWidget {
               fontSize: 18,
             ),
           ),
-          onTap: () {},
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => ProjectsScreen(),
+              ),
+            );
+          },
         ),
         ListTile(
           leading: Icon(Icons.today),
@@ -114,7 +131,14 @@ class MainDrawer extends StatelessWidget {
               fontSize: 18,
             ),
           ),
-          onTap: () {},
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => AppointmentsScreen(),
+              ),
+            );
+          },
         ),
         ListTile(
           leading: Icon(Icons.info),
@@ -149,17 +173,6 @@ class MainDrawer extends StatelessWidget {
               ),
             );
           },
-        ),
-        ListTile(),
-        ListTile(
-          leading: Icon(Icons.person),
-          title: Text(
-            'Sign In',
-            style: TextStyle(
-              fontSize: 18,
-            ),
-          ),
-          onTap: () {},
         ),
       ],
     ));
