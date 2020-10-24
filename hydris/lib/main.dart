@@ -21,7 +21,7 @@ Map<int, Color> custom_swatch_color = {
 
 void main() {
   runApp(MaterialApp(
-    home: AboutUsScreen(),
+    home: HomeScreen(),
     title: 'HYDRIS',
     theme: ThemeData(
       primarySwatch: MaterialColor(0xFF003065, custom_swatch_color),

@@ -1,4 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:hydris/about_us_screen.dart';
+import 'package:hydris/appointments_screen.dart';
+import 'package:hydris/contact_screen.dart';
+import 'package:hydris/events_screen.dart';
+import 'package:hydris/projects_screen.dart';
+import 'package:hydris/screens/home_screen/home_screen.dart';
+import 'package:hydris/solicitation_rfps_screen.dart';
+import 'package:hydris/upcoming_bids_screen.dart';
 
 class MainDrawer extends StatelessWidget {
   @override
@@ -38,7 +46,14 @@ class MainDrawer extends StatelessWidget {
               fontSize: 18,
             ),
           ),
-          onTap: () {},
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => HomeScreen(),
+              ),
+            );
+          },
         ),
         ListTile(
           leading: Icon(Icons.assignment),
@@ -48,7 +63,14 @@ class MainDrawer extends StatelessWidget {
               fontSize: 18,
             ),
           ),
-          onTap: () {},
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => EventsScreen(),
+              ),
+            );
+          },
         ),
         ListTile(
           leading: Icon(Icons.lock_clock),
@@ -58,7 +80,14 @@ class MainDrawer extends StatelessWidget {
               fontSize: 18,
             ),
           ),
-          onTap: () {},
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => UpcomingBidsScreen(),
+              ),
+            );
+          },
         ),
         ListTile(
           leading: Icon(Icons.add_circle),
@@ -68,7 +97,14 @@ class MainDrawer extends StatelessWidget {
               fontSize: 18,
             ),
           ),
-          onTap: () {},
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => SolicitationRFPSScreen(),
+              ),
+            );
+          },
         ),
         ListTile(
           leading: Icon(Icons.construction),
@@ -78,7 +114,14 @@ class MainDrawer extends StatelessWidget {
               fontSize: 18,
             ),
           ),
-          onTap: () {},
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => ProjectsScreen(),
+              ),
+            );
+          },
         ),
         ListTile(
           leading: Icon(Icons.today),
@@ -88,7 +131,14 @@ class MainDrawer extends StatelessWidget {
               fontSize: 18,
             ),
           ),
-          onTap: () {},
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => AppointmentsScreen(),
+              ),
+            );
+          },
         ),
         ListTile(
           leading: Icon(Icons.info),
@@ -98,7 +148,14 @@ class MainDrawer extends StatelessWidget {
               fontSize: 18,
             ),
           ),
-          onTap: () {},
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => AboutUsScreen(),
+              ),
+            );
+          },
         ),
         ListTile(
           leading: Icon(Icons.contact_mail),
@@ -108,18 +165,14 @@ class MainDrawer extends StatelessWidget {
               fontSize: 18,
             ),
           ),
-          onTap: () {},
-        ),
-        ListTile(),
-        ListTile(
-          leading: Icon(Icons.person),
-          title: Text(
-            'Sign In',
-            style: TextStyle(
-              fontSize: 18,
-            ),
-          ),
-          onTap: () {},
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => ContactScreen(),
+              ),
+            );
+          },
         ),
       ],
     ));
