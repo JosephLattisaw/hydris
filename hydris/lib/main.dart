@@ -24,7 +24,8 @@ void main() {
     home: HomeScreen(),
     title: 'HYDRIS',
     theme: ThemeData(
-      primarySwatch: MaterialColor(0xFF003065, custom_swatch_color),
-    ),
+        primarySwatch: MaterialColor(0xFF003065, custom_swatch_color),
+        secondaryHeaderColor: Colors.blue[900],
+        accentColor: Colors.orange[900]),
   ));
 }

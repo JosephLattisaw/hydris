@@ -14,6 +14,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: Theme.of(context),
       home: HomeScreenWidget(),
     );
   }
@@ -76,7 +77,7 @@ class HomeScreenState extends State<HomeScreenWidget> {
                 child: Text(
                   "GOVERNMENT CONTRACTOR",
                   style: TextStyle(
-                      color: Colors.blue[900],
+                      color: Theme.of(context).secondaryHeaderColor,
                       fontSize: 30,
                       fontWeight: FontWeight.bold,
                       letterSpacing: -3.0),
@@ -88,7 +89,7 @@ class HomeScreenState extends State<HomeScreenWidget> {
                 left: 30,
                 child: RaisedButton(
                   onPressed: () {},
-                  color: Colors.orange[900],
+                  color: Theme.of(context).accentColor,
                   textColor: Colors.white,
                   elevation: 130,
                   child: Padding(
@@ -109,7 +110,8 @@ class HomeScreenState extends State<HomeScreenWidget> {
                 decoration: BoxDecoration(
                   color: Colors.white,
                   border: Border(
-                      top: BorderSide(width: 10.0, color: Colors.orange[900])),
+                      top: BorderSide(
+                          width: 10.0, color: Theme.of(context).accentColor)),
                 ),
               ),
               Positioned(
@@ -119,7 +121,7 @@ class HomeScreenState extends State<HomeScreenWidget> {
                   "SERVICES",
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
-                      color: Colors.orange[900],
+                      color: Theme.of(context).accentColor,
                       fontSize: 15),
                 ),
               ),
@@ -154,7 +156,7 @@ class HomeScreenState extends State<HomeScreenWidget> {
                 child: Container(
                   child: Text("DEPENDING ON YOUR NEEDS",
                       style: TextStyle(
-                          color: Colors.blue[900],
+                          color: Theme.of(context).secondaryHeaderColor,
                           fontWeight: FontWeight.bold,
                           fontSize: 30)),
                 ),
@@ -162,7 +164,7 @@ class HomeScreenState extends State<HomeScreenWidget> {
             ],
           ),
           Container(
-            color: Colors.orange[900],
+            color: Theme.of(context).accentColor,
             height: 4,
             margin: EdgeInsets.only(left: 20, right: 20),
           ),
@@ -192,7 +194,7 @@ class HomeScreenState extends State<HomeScreenWidget> {
                               "BUILDING & CONSTRUCTION",
                               textAlign: TextAlign.center,
                               style: TextStyle(
-                                  color: Colors.blue[900],
+                                  color: Theme.of(context).secondaryHeaderColor,
                                   fontSize: 20.0,
                                   fontWeight: FontWeight.bold),
                             )
@@ -212,7 +214,7 @@ class HomeScreenState extends State<HomeScreenWidget> {
                               "GOVERNMENT CONRTRACTING",
                               textAlign: TextAlign.center,
                               style: TextStyle(
-                                  color: Colors.blue[900],
+                                  color: Theme.of(context).secondaryHeaderColor,
                                   fontSize: 20.0,
                                   fontWeight: FontWeight.bold),
                             )
@@ -239,7 +241,7 @@ class HomeScreenState extends State<HomeScreenWidget> {
                             "OFFICE & INTERIOR DESIGN",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                                color: Colors.blue[900],
+                                color: Theme.of(context).secondaryHeaderColor,
                                 fontSize: 20.0,
                                 fontWeight: FontWeight.bold),
                           ),
@@ -260,7 +262,7 @@ class HomeScreenState extends State<HomeScreenWidget> {
                             "INFORMATION & TECHNOLOGY",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                                color: Colors.blue[900],
+                                color: Theme.of(context).secondaryHeaderColor,
                                 fontSize: 20.0,
                                 fontWeight: FontWeight.bold),
                           ),
@@ -356,7 +358,7 @@ class HomeScreenState extends State<HomeScreenWidget> {
               child: Text(
                 "CORE FEATURES",
                 style: TextStyle(
-                    color: Colors.orange[900],
+                    color: Theme.of(context).accentColor,
                     fontSize: 16,
                     fontWeight: FontWeight.bold),
               ),
@@ -369,7 +371,7 @@ class HomeScreenState extends State<HomeScreenWidget> {
                   "BUILD SERVICES",
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                      color: Colors.blue[900],
+                      color: Theme.of(context).secondaryHeaderColor,
                       fontSize: 50,
                       fontWeight: FontWeight.bold,
                       height: .8),
