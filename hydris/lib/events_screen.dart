@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hydris/app_bar.dart';
+import 'package:hydris/event_card.dart';
 import 'package:hydris/main_drawer.dart';
 import 'package:video_player/video_player.dart';
 
@@ -48,6 +49,126 @@ class _EventsScreenState extends State<EventsScreen> {
                 child: VideoPlayer(_controller),
               ),
             ),
+            Container(
+              decoration: BoxDecoration(
+                color: Colors.white,
+                border: Border(
+                    top: BorderSide(width: 10.0, color: Colors.orange[900])),
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Align(
+              alignment: Alignment.centerRight,
+              child: Padding(
+                padding: const EdgeInsets.only(right: 8.0),
+                child: Text(
+                  "UPCOMING EVENTS",
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.orange[900],
+                      fontSize: 15),
+                ),
+              ),
+            ),
+            Stack(alignment: Alignment.center, children: [
+              Text(
+                "EVENTS",
+                style: TextStyle(
+                  fontSize: 70,
+                  fontWeight: FontWeight.bold,
+                  foreground: Paint()
+                    ..style = PaintingStyle.stroke
+                    ..strokeWidth = .4
+                    ..color = Colors.grey,
+                ),
+              ),
+              Text(
+                "EVENTS",
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 70,
+                    fontWeight: FontWeight.bold),
+              ),
+              Text(
+                "EVENTS",
+                style: TextStyle(
+                    color: Theme.of(context).primaryColor,
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold),
+              ),
+            ]),
+            EventCard(
+              title: "Grand Opening",
+              description: "Sunday . 9am - 11am",
+              date: "13",
+              month: "Jan",
+              bgColor: Theme.of(context).primaryColor,
+              txtColor: Colors.orange[900],
+              picture: ConstrainedBox(
+                  constraints: BoxConstraints(
+                    maxHeight: 10000000,
+                  ),
+                  child: Image.asset(
+                    "assets/grandopening.jpg",
+                    fit: BoxFit.fitHeight,
+                  )),
+            ),
+            SizedBox(
+              height: 5,
+            ),
+            EventCard(
+              title: "Red Tape Cutting",
+              description: "Sunday . 9am - 11am",
+              date: "16",
+              month: "Jan",
+              bgColor: Theme.of(context).primaryColor,
+              txtColor: Colors.orange[900],
+              picture: ConstrainedBox(
+                  constraints:
+                      BoxConstraints(maxHeight: 100000, maxWidth: 1000000),
+                  child: Image.asset(
+                    "assets/redtape.jpg",
+                    fit: BoxFit.cover,
+                  )),
+            ),
+            SizedBox(
+              height: 5,
+            ),
+            EventCard(
+              title: "Demolition of Skyscraper",
+              description: "Sunday . 9am - 11am",
+              date: "3",
+              month: "Mar",
+              bgColor: Theme.of(context).primaryColor,
+              txtColor: Colors.orange[900],
+              picture: Image.asset("assets/grandopening.jpg"),
+            ),
+            SizedBox(
+              height: 5,
+            ),
+            EventCard(
+              title: "Breaking Ground",
+              description: "Sunday . 9am - 11am",
+              date: "20",
+              month: "Apr",
+              bgColor: Theme.of(context).primaryColor,
+              txtColor: Colors.orange[900],
+              picture: Image.asset("assets/grandopening.jpg"),
+            ),
+            SizedBox(
+              height: 5,
+            ),
+            EventCard(
+              title: "Road Pavement",
+              description: "Sunday . 9am - 11am",
+              date: "13",
+              month: "Jun",
+              bgColor: Theme.of(context).primaryColor,
+              txtColor: Colors.orange[900],
+              picture: Image.asset("assets/grandopening.jpg"),
+            )
           ],
         ),
       ),

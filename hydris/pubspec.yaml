@@ -73,6 +73,8 @@ flutter:
     - assets/4465530.png
     - assets/american-flag-3001893.png
     - assets/file.mp4
+    - assets/grandopening.jpg
+    - assets/redtape.jpg
 
   fonts:
     - family: Montserrat
