@@ -31,7 +31,7 @@ class EventCard extends StatelessWidget {
           leading: Container(
             padding: EdgeInsets.symmetric(horizontal: 16),
             decoration: BoxDecoration(
-                color: bgColor.withOpacity(0.3),
+                color: bgColor.withOpacity(0.2),
                 borderRadius: BorderRadius.circular(10)),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,

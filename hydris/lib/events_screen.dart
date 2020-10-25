@@ -53,7 +53,8 @@ class _EventsScreenState extends State<EventsScreen> {
               decoration: BoxDecoration(
                 color: Colors.white,
                 border: Border(
-                    top: BorderSide(width: 10.0, color: Colors.orange[900])),
+                    top: BorderSide(
+                        width: 10.0, color: Theme.of(context).accentColor)),
               ),
             ),
             SizedBox(
@@ -67,7 +68,7 @@ class _EventsScreenState extends State<EventsScreen> {
                   "UPCOMING EVENTS",
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
-                      color: Colors.orange[900],
+                      color: Theme.of(context).accentColor,
                       fontSize: 15),
                 ),
               ),
@@ -94,7 +95,7 @@ class _EventsScreenState extends State<EventsScreen> {
               Text(
                 "EVENTS",
                 style: TextStyle(
-                    color: Theme.of(context).primaryColor,
+                    color: Theme.of(context).secondaryHeaderColor,
                     fontSize: 30,
                     fontWeight: FontWeight.bold),
               ),
@@ -104,8 +105,8 @@ class _EventsScreenState extends State<EventsScreen> {
               description: "Sunday . 9am - 11am",
               date: "13",
               month: "Jan",
-              bgColor: Theme.of(context).primaryColor,
-              txtColor: Colors.orange[900],
+              bgColor: Theme.of(context).secondaryHeaderColor,
+              txtColor: Theme.of(context).accentColor,
               picture: ConstrainedBox(
                   constraints: BoxConstraints(
                     maxHeight: 10000000,
@@ -123,8 +124,8 @@ class _EventsScreenState extends State<EventsScreen> {
               description: "Sunday . 9am - 11am",
               date: "16",
               month: "Jan",
-              bgColor: Theme.of(context).primaryColor,
-              txtColor: Colors.orange[900],
+              bgColor: Theme.of(context).secondaryHeaderColor,
+              txtColor: Theme.of(context).accentColor,
               picture: ConstrainedBox(
                   constraints:
                       BoxConstraints(maxHeight: 100000, maxWidth: 1000000),
@@ -141,8 +142,8 @@ class _EventsScreenState extends State<EventsScreen> {
               description: "Sunday . 9am - 11am",
               date: "3",
               month: "Mar",
-              bgColor: Theme.of(context).primaryColor,
-              txtColor: Colors.orange[900],
+              bgColor: Theme.of(context).secondaryHeaderColor,
+              txtColor: Theme.of(context).accentColor,
               picture: Image.asset("assets/grandopening.jpg"),
             ),
             SizedBox(
@@ -153,8 +154,8 @@ class _EventsScreenState extends State<EventsScreen> {
               description: "Sunday . 9am - 11am",
               date: "20",
               month: "Apr",
-              bgColor: Theme.of(context).primaryColor,
-              txtColor: Colors.orange[900],
+              bgColor: Theme.of(context).secondaryHeaderColor,
+              txtColor: Theme.of(context).accentColor,
               picture: Image.asset("assets/grandopening.jpg"),
             ),
             SizedBox(
@@ -166,7 +167,7 @@ class _EventsScreenState extends State<EventsScreen> {
               date: "13",
               month: "Jun",
               bgColor: Theme.of(context).primaryColor,
-              txtColor: Colors.orange[900],
+              txtColor: Theme.of(context).accentColor,
               picture: Image.asset("assets/grandopening.jpg"),
             )
           ],

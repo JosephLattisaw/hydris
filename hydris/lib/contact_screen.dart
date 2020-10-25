@@ -66,7 +66,7 @@ class _ContactScreenState extends State<ContactScreen> {
                             children: [
                               Expanded(
                                 child: RaisedButton(
-                                  color: Colors.orange[900],
+                                  color: Theme.of(context).accentColor,
                                   onPressed: () {},
                                   shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(5.0)),
@@ -83,7 +83,7 @@ class _ContactScreenState extends State<ContactScreen> {
                               ),
                               Expanded(
                                 child: RaisedButton(
-                                  color: Colors.orange[900],
+                                  color: Theme.of(context).accentColor,
                                   onPressed: () {},
                                   shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(5.0)),
@@ -100,7 +100,7 @@ class _ContactScreenState extends State<ContactScreen> {
                               ),
                               Expanded(
                                 child: RaisedButton(
-                                  color: Colors.orange[900],
+                                  color: Theme.of(context).accentColor,
                                   onPressed: () {},
                                   shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(5.0)),
@@ -136,15 +136,18 @@ class _ContactScreenState extends State<ContactScreen> {
                           decoration: InputDecoration(
                             enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
-                                    color: Colors.blue[900], width: 2.0)),
+                                    color:
+                                        Theme.of(context).secondaryHeaderColor,
+                                    width: 2.0)),
                             focusedBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
-                                    color: Colors.orange[900], width: 2.0)),
+                                    color: Theme.of(context).accentColor,
+                                    width: 2.0)),
                             fillColor: Colors.white,
                             labelText: "Name",
                             prefixIcon: Icon(
                               Icons.person,
-                              color: Colors.blue[900],
+                              color: Theme.of(context).secondaryHeaderColor,
                             ),
                             //filled: true,
                             contentPadding: EdgeInsets.all(0),
@@ -158,15 +161,18 @@ class _ContactScreenState extends State<ContactScreen> {
                           decoration: InputDecoration(
                             enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
-                                    color: Colors.blue[900], width: 2.0)),
+                                    color:
+                                        Theme.of(context).secondaryHeaderColor,
+                                    width: 2.0)),
                             focusedBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
-                                    color: Colors.orange[900], width: 2.0)),
+                                    color: Theme.of(context).accentColor,
+                                    width: 2.0)),
                             fillColor: Colors.white,
                             labelText: "E-mail Address",
                             prefixIcon: Icon(
                               Icons.mail,
-                              color: Colors.blue[900],
+                              color: Theme.of(context).secondaryHeaderColor,
                             ),
                             //filled: true,
                             contentPadding: EdgeInsets.all(0),
@@ -180,15 +186,18 @@ class _ContactScreenState extends State<ContactScreen> {
                           decoration: InputDecoration(
                             enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
-                                    color: Colors.blue[900], width: 2.0)),
+                                    color:
+                                        Theme.of(context).secondaryHeaderColor,
+                                    width: 2.0)),
                             focusedBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
-                                    color: Colors.orange[900], width: 2.0)),
+                                    color: Theme.of(context).accentColor,
+                                    width: 2.0)),
                             fillColor: Colors.white,
                             labelText: "Phone Number",
                             prefixIcon: Icon(
                               Icons.phone_android,
-                              color: Colors.blue[900],
+                              color: Theme.of(context).secondaryHeaderColor,
                             ),
                             contentPadding: EdgeInsets.all(0),
                           ),
@@ -209,14 +218,16 @@ class _ContactScreenState extends State<ContactScreen> {
                         decoration: InputDecoration(
                           enabledBorder: OutlineInputBorder(
                               borderSide: BorderSide(
-                                  color: Colors.blue[900], width: 2.0)),
+                                  color: Theme.of(context).secondaryHeaderColor,
+                                  width: 2.0)),
                           focusedBorder: OutlineInputBorder(
                               borderSide: BorderSide(
-                                  color: Colors.orange[900], width: 2.0)),
+                                  color: Theme.of(context).accentColor,
+                                  width: 2.0)),
                           labelText: "Message",
                           prefixIcon: Icon(
                             Icons.edit,
-                            color: Colors.blue[900],
+                            color: Theme.of(context).secondaryHeaderColor,
                           ),
                         ),
                         maxLines: double.maxFinite.toInt(),
@@ -250,10 +261,11 @@ class _ContactScreenState extends State<ContactScreen> {
                                 },
                                 shape: RoundedRectangleBorder(
                                     side: BorderSide(
-                                        color: Colors.orange[900], width: 2.0)),
+                                        color: Theme.of(context).accentColor,
+                                        width: 2.0)),
                                 child: Text("Quote"),
                                 color: toggleServicesIndex == 0
-                                    ? Colors.orange[900]
+                                    ? Theme.of(context).accentColor
                                     : Colors.white,
                               ),
                               RaisedButton(
@@ -264,10 +276,11 @@ class _ContactScreenState extends State<ContactScreen> {
                                 },
                                 shape: RoundedRectangleBorder(
                                     side: BorderSide(
-                                        color: Colors.orange[900], width: 2.0)),
+                                        color: Theme.of(context).accentColor,
+                                        width: 2.0)),
                                 child: Text("Proposal"),
                                 color: toggleServicesIndex == 1
-                                    ? Colors.orange[900]
+                                    ? Theme.of(context).accentColor
                                     : Colors.white,
                               ),
                               RaisedButton(
@@ -278,10 +291,11 @@ class _ContactScreenState extends State<ContactScreen> {
                                 },
                                 shape: RoundedRectangleBorder(
                                     side: BorderSide(
-                                        color: Colors.orange[900], width: 2.0)),
+                                        color: Theme.of(context).accentColor,
+                                        width: 2.0)),
                                 child: Text("Questions"),
                                 color: toggleServicesIndex == 2
-                                    ? Colors.orange[900]
+                                    ? Theme.of(context).accentColor
                                     : Colors.white,
                               ),
                               RaisedButton(
@@ -292,10 +306,11 @@ class _ContactScreenState extends State<ContactScreen> {
                                 },
                                 shape: RoundedRectangleBorder(
                                     side: BorderSide(
-                                        color: Colors.orange[900], width: 2.0)),
+                                        color: Theme.of(context).accentColor,
+                                        width: 2.0)),
                                 child: Text("Job Application"),
                                 color: toggleServicesIndex == 3
-                                    ? Colors.orange[900]
+                                    ? Theme.of(context).accentColor
                                     : Colors.white,
                               ),
                             ],
@@ -309,7 +324,7 @@ class _ContactScreenState extends State<ContactScreen> {
                             style: TextStyle(
                                 fontSize: 17, fontWeight: FontWeight.bold),
                           ),
-                          color: Colors.orange[900],
+                          color: Theme.of(context).accentColor,
                         )
                       ],
                     ),
