@@ -5,7 +5,6 @@ import 'package:hydris/contact_screen.dart';
 import 'package:hydris/events_screen.dart';
 import 'package:hydris/projects_screen.dart';
 import 'package:hydris/screens/home_screen/home_screen.dart';
-import 'package:hydris/solicitation_rfps_screen.dart';
 import 'package:hydris/upcoming_bids_screen.dart';
 
 class MainDrawer extends StatelessWidget {
@@ -85,23 +84,6 @@ class MainDrawer extends StatelessWidget {
               context,
               MaterialPageRoute(
                 builder: (context) => UpcomingBidsScreen(),
-              ),
-            );
-          },
-        ),
-        ListTile(
-          leading: Icon(Icons.add_circle),
-          title: Text(
-            'Solicitation RFPs',
-            style: TextStyle(
-              fontSize: 18,
-            ),
-          ),
-          onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => SolicitationRFPSScreen(),
               ),
             );
           },

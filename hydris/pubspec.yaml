@@ -75,6 +75,12 @@ flutter:
     - assets/file.mp4
     - assets/grandopening.jpg
     - assets/redtape.jpg
+    - assets/unrecognizable_people.jpg
+    - assets/man.png
+    - assets/dentist.png
+    - assets/project_manager.png
+    - assets/building_icon.png
+    - assets/engineer.png    
 
   fonts:
     - family: Montserrat
