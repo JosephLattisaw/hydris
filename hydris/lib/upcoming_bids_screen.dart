@@ -54,9 +54,9 @@ class _UpcomingBidsScreenState extends State<UpcomingBidsScreen> {
                     ],
                     rows: [
                       DataRow(
-                          color: MaterialStateProperty.resolveWith((states) {
+                          /*color: MaterialStateProperty.resolveWith((states) {
                             return Colors.blue[900].withOpacity(.1);
-                          }),
+                          }),*/
                           cells: [
                             DataCell(Text('82617WS00010')),
                             DataCell(Text(
